@@ -1,0 +1,10 @@
+function homeproperties(plant) {
+    if (plant === "melon" || plant === "water melon") {
+        console.log("Bostan");
+    } else if (plant === "Pepper" || plant === "Tomato" || plant === "Carrot") {
+        console.log("Garden");
+	} else if (plant === "Onion" || plant === "Garlic" || plant === "Corn") {
+        console.log("Field");	
+    } else {
+        console.log("unknown");
+    }
