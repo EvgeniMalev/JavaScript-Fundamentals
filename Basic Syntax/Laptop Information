@@ -1,0 +1,4 @@
+function laptopinformation(name, yearofproduction, price, color, RAM, CPU, HDD) {
+    console.log(`Name: ${name}, Year: ${yearofproduction}, Price: ${price.toFixed(2)}, Color: ${color},`);
+	console.log(`RAM: ${RAM}, CPU: ${CPU}, HDD: ${HDD}`);
+}
