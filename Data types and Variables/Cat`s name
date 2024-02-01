@@ -1,0 +1,3 @@
+function catname(name, breed, age) {
+    console.log(`The cat`s name is ${name}from the breed ${breed} and it is ${age} years old.`);
+}
