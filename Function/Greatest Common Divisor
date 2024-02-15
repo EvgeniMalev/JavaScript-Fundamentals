@@ -1,0 +1,11 @@
+function NOD(first, second) {
+	
+		while (second != 0){
+		    let oldsecond = second;
+		    second = first % second;
+		    first = oldsecond;
+		}
+		
+		console.log("The lowest common divisor is " + first);
+	}
+NOD(2,10)
