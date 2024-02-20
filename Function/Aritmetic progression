@@ -1,0 +1,13 @@
+function arithmeticProgression(n) {
+    let sum = 0;
+
+    for (let i = 1; i <= n; i++) {
+        sum += i;
+        console.log('Term', i, ':', i);
+    }
+
+    console.log('The sum of the progression is:', sum);
+    return sum;
+}
+
+arithmeticProgression(5);
