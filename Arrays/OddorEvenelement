@@ -1,0 +1,19 @@
+function oddorevenelement(arr) {
+    let odd = [];
+    let even = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        let currentNumber = arr[i];
+
+        if (currentNumber % 2 === 0) {
+            even.push(currentNumber);
+        } else {
+            odd.push(currentNumber);
+        }
+    }
+
+    console.log("Odd Numbers:", odd);
+    console.log("Even Numbers:", even);
+}
+
+oddorevenelement([5, 90, 105, 18, 78, 65, 776, 119]);
