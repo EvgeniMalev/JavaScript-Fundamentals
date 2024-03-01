@@ -1,0 +1,13 @@
+function arradv3() {
+    let arr = ['a', 'b', 'c', 'd', 'd', 'e'];
+
+    let index = arr.indexOf('b');
+
+    if (index !== -1) { 
+        arr.splice(index, 3); 
+    }
+
+    console.log(arr);
+}
+
+arradv3();
