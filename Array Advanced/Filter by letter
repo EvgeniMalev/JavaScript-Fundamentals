@@ -1,0 +1,15 @@
+/**
+  * Filter the array of letters by the letters "e" and "E"
+**//
+
+function arradv7() {
+
+    let textarr = ['Italy', 'France', 'Ethiophia', 'Mexico', 'China'];
+
+    let newtext = textarr.filter(s => s.includes('e'));
+    let newtext1 = textarr.filter(s => s.includes('E'));
+
+    console.log(newtext);
+    console.log(newtext1);
+}
+arradv7();
