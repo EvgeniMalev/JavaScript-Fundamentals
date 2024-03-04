@@ -1,0 +1,9 @@
+function arradv7() {
+    let textarr = ['Rome', 'Milan', 'Turin', 'Venice', 'Florence', 'Genoa', 'Verona'];
+    
+    let filteredArr = textarr.filter((element, index) => index % 2 === 0);
+
+    console.log(filteredArr);
+}
+
+arradv7();
