@@ -1,0 +1,7 @@
+function arradv7() {
+    let textarr = ['Java', 'Python', 'Machintosch', 'conversations.', 'Vocabulary', 'text', 'prearranged'];
+    let arr = textarr.filter(s => s.length >= 4 && s.length <= 7); 
+    console.log(arr);
+}
+
+arradv7();
