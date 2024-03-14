@@ -1,4 +1,4 @@
-  	const Fiat = {
+const Fiat = {
     topic: '500',
     lang: 'Fiat new 500',
     sub_topics: {
