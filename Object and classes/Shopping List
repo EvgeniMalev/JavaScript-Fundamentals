@@ -1,0 +1,24 @@
+/*
+Create a List with strings and integers
+*/
+
+function createShoppingList(Shoppingproducts) {
+    let shoppingList = {};
+
+    Shoppingproducts.forEach(product => {
+        const quantity = product.quantity; 
+        shoppingList[product.name] = quantity;
+    });
+
+    for (let product in shoppingList) { 
+        console.log(`Product: ${product} -- Quantity: ${shoppingList[product]}`);
+    }
+}
+
+const products = [
+    { name: "Grape", quantity: 5 },
+    { name: "Pear", quantity: 8 },
+    { name: "Lemon", quantity: 9 }
+];
+
+createShoppingList(products);
