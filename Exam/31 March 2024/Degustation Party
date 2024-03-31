@@ -1,0 +1,40 @@
+function solve(input) {
+    let guests = {};
+    let unlikedMeals = 0;
+
+    for (const line of input) {
+        if (line === 'Stop') {
+            break;
+        }
+
+        const [command, guest, meal] = line.split('-');
+
+        if (command === 'Like') {
+            if (!guests.hasOwnProperty(guest)) {
+                guests[guest] = { likedMeals: [], dislikedMeals: [] };
+            }
+            if (!guests[guest].likedMeals.includes(meal)) {
+                guests[guest].likedMeals.push(meal);
+            }
+        } else if (command === 'Dislike') {
+            if (!guests.hasOwnProperty(guest)) {
+                console.log(`${guest} is not at the party.`);
+                continue;
+            }
+            if (guests[guest].likedMeals.includes(meal)) {
+                guests[guest].likedMeals = guests[guest].likedMeals.filter(m => m !== meal);
+                guests[guest].dislikedMeals.push(meal);
+                console.log(`${guest} doesn't like the ${meal}.`);
+                unlikedMeals++;
+            } else {
+                console.log(`${guest} doesn't have the ${meal} in his/her collection.`);
+            }
+        }
+    }
+
+    Object.entries(guests).forEach(([guest, meals]) => {
+        console.log(`${guest}: ${meals.likedMeals.join(', ')}`);
+    });
+
+    console.log(`Unliked meals: ${unlikedMeals}`);
+}
