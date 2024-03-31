@@ -1,0 +1,22 @@
+function translateMessage(input) {
+    const n = parseInt(input.shift());
+
+    for (let i = 0; i < n; i++) {
+        const message = input[i];
+
+        const pattern = /^!([A-Z][a-z]{2,})!:\[([A-Za-z]{8,})\]$/;
+        const match = message.match(pattern);
+
+        if (match) {
+            const command = match[1];
+            const text = match[2];
+
+            const asciiNumbers = text.split('').map(char => char.charCodeAt(0));
+            const translatedText = asciiNumbers.join(' ');
+
+            console.log(`${command}: ${translatedText}`);
+        } else {
+            console.log("The message is invalid");
+        }
+    }
+}
